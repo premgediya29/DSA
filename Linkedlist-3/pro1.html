@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+     function abc(value){
+        this.value=value
+        this.next=null
+    }
+    const abc1=new abc(34)
+    const abc2=new abc(45)
+    const abc3=new abc(23)
+    const abc4=new abc(89)
+    const abc5=new abc(67)
+    const abc6=new abc(89)
+
+    abc1.next=abc2
+    abc2.next=abc3
+    abc3.next=abc4
+    abc4.next=abc5
+    abc5.next=abc6
+
+    function palindrome(head){
+        let curr=head
+        let arr=[]
+        while(curr!=null)
+        {
+            arr.push(curr.value)
+            curr=curr.next
+        }
+        return arr.join('')===arr.reverse().join('')
+    }
+    console.log(palindrome(abc1));
+</script>
