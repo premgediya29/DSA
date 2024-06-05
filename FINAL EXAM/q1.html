@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let nums = [2,7,11,15]
+    let target = 9
+
+    function input(nums,target){
+        let check = 0
+        let change = []
+        for (let i = 0; i < nums.length; i++) {
+            if(check == target){
+                break
+            }else{
+                check += nums[i]
+                change.push(i)
+            }
+        }
+        return change;
+    }
+
+    console.log(input(nums , target));
+
+</script>
+
+<script>
+let nums2 = [3,2,4]
+let target2 = 6
+
+function input(nums2,target2)
+{
+    let check2 = 0
+    let change2 = []
+
+    for (let j = 1 ; j < nums2.length ; j++) 
+    {
+        if(check2 == target2)
+        {
+            break
+        }
+        else
+        {
+            check2 += nums2[j]
+            change2.push(j)
+        }
+    }
+
+    return change2;
+}
+
+console.log(input(nums2 , target2));
+</script>
+<script>
+
+    let value = [3,3]
+    let  fixvalue = 6
+
+    function input(value,fixvalue){
+        let check = 0
+        let change = []
+        for (let i = 0; i < value.length; i++) {
+            if(check == fixvalue){
+                break
+            }else{
+                check += value[i]
+                change.push(i)
+            }
+        }
+        return change;
+    }
+
+    console.log(input(value , fixvalue));
+</script>
