@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function Linklist(val){
+        this.node = val
+        this.next = null
+    }
+    let node1 = new Linklist(1)
+    let node2 = new Linklist(2)
+    let node3 = new Linklist(3)
+    let node4 = new Linklist(4)
+    let node5 = new Linklist(5)
+
+    node1.next = node2
+    node2.next = node3
+    node3.next = node4
+    node4.next = node5
+
+    let curr = node1
+    let n = 1
+    let nlength = 5
+
+    removeElement(curr,n,nlength)
+    
+    function removeElement(lists,remove,totalnode){
+        let n = remove
+        let cout = totalnode
+        let step = lists
+        while(step != null){
+            if(cout === n){
+                step = step.next
+            }
+            else{
+                console.log(step.node)
+                step = step.next
+            }
+            cout--
+        }
+    }
+
+    
+
+</script>

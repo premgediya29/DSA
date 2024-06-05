@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+function Node(value){
+        this.value = value
+        this.nextnode = null
+    }
+
+    const Node1 = new Node(1)
+    const Node2 = new Node(3)
+    const Node3 = new Node(5)
+
+function link(value){
+        this.value = value
+        this.nextnode = null
+    }
+
+    const link1 = new link(2)
+    const link2 = new link(4)
+    const link3 = new link(6)
+
+    Node1.next = link1
+    link1.next = Node2
+    Node2.next = link2
+    link2.next = Node3
+    Node3.next = link3
+
+    let current = Node1
+    while(current != null){
+        console.log(current.value)
+        current = current.next
+    }
+
+</script>
