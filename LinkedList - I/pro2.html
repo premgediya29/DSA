@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program-2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function linkedlist(value){
+        this.value=value
+        this.next=null
+    }
+    const linkedlist1=new linkedlist(34)
+    const linkedlist2=new linkedlist(45)
+    const linkedlist3=new linkedlist(23)
+    const linkedlist4=new linkedlist(89)
+    const linkedlist5=new linkedlist(67)
+    const linkedlist6=new linkedlist(89)
+
+    linkedlist1.next=linkedlist2
+    linkedlist2.next=linkedlist3
+    linkedlist3.next=linkedlist4
+    linkedlist4.next=linkedlist5
+    linkedlist5.next=linkedlist6
+
+    let curr=linkedlist1
+    while(curr!=null)
+    {
+        console.log(curr.value)
+        curr=curr.next
+    }
+</script>
