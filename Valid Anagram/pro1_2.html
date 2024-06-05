@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+    function rev(s,t){
+   let stacks = []
+   let stackt = []
+   if (s.length !== t.length) {
+        return false;
+    }
+    for (let i = 0; i < s.length; i++) {
+        stacks.push(s[i]);
+        stackt.push(t[i]);
+    }
+
+    stacks.sort()
+    stackt.sort()
+
+    while (stacks.length > 0) {
+      
+        if (stacks.pop() !== stackt.pop()) {
+            return false; 
+        }
+    }
+
+    return true;
+
+    }
+    console.log(rev("rat", "car"))
+</script>
